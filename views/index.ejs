@@ -5,7 +5,27 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<center>
+  		<h1>Login</h1>
+  		<form method="POST" action="/login">
+  			username: <br><input type="text" name="username"><br>
+  			Password:<br> <input type="password" name="password"><br>
+  			<input type="submit" name="login" value="LOG IN">
+  		</form>
+  		<hr/>
+  		<h1>Or Register..</h1>
+  		<form method="POST" action="/register">
+
+  			Username : <br><input type="text" name="username"><br>
+  			Password:<br> <input type="password" name="password"><br>
+  			Password:<br> <input type="password" name="c-password"><br>
+  			Email : <br><input type="email" name="email"><br>
+        FirstName :<br> <input type="text" name="fname"><br><br>
+        LastName :<br> <input type="text" name="lname"><br><br>
+  			Address :<br> <input type="text" name="address"><br><br>
+  			<input type="submit" name="register" value="REGISTER NOW">
+  		</form>
+  	</center>
+
   </body>
 </html>

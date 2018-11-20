@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');//importing express-session module for handling sessions
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +13,12 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(session({
+    secret: "asdflkjasdfasdf",
+    resave: true,
+    saveUninitialized: true
+}));//making app instance use session; secret is used for cookie handling etc
 
 app.use(logger('dev'));
 app.use(express.json());
